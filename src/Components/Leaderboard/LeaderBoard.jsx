@@ -5,7 +5,7 @@ import { leaderBoardContextProvider } from '../../Contexts/LeaderBoardContext';
 import { pawnContextProvider } from '../../Contexts/PawnContext';
 export default function LeaderBoard() {
     const { leaderBoard, getLeaderBoard } = useContext(leaderBoardContextProvider);
-    const {pawn} = useContext(pawnContextProvider);
+    const {pawn} = useContext(pawnContextProvider); 
     useEffect(() => {
         getLeaderBoard();
     }, [pawn]);
