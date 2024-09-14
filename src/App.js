@@ -9,6 +9,7 @@ import LoginDataContext from './Contexts/LoginDataContext';
 import PawnContext from './Contexts/PawnContext';
 import SocketContext from './Contexts/SocketContext';
 import Register from './Pages/Login/Register';
+import LandingPage from './Pages/LandingPage/LandingPage';
 function App() {
   return (
     <div>
@@ -18,6 +19,7 @@ function App() {
             <Route exact path="/" Component={Login} />
             <Route exact path='/map' element={<DiceContext><MapPage /></DiceContext>} />
             <Route exact path='/register' element={<Register />} />
+            <Route exact path='/landing-page' element={<LandingPage />} />
           </Routes>
         </PawnContext>
       </LoginDataContext>

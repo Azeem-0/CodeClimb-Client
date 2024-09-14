@@ -1,4 +1,4 @@
-.login-page{
+.login-page {
     padding: 0;
     margin: 0;
     width: 100dvw;
@@ -9,33 +9,55 @@
     justify-content: space-between;
     background: url("../../Assets/background.jpg") center;
 }
-.login-controller{
+
+.login-controller {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50dvw;
-    height: 100dvh;
+    width: 100%;
 }
-.login-controller div{
+
+.login-controller .login-child {
     display: flex;
     flex-direction: column;
-    height: 35dvh;
+    height: fit-content;
     align-items: center;
     justify-content: space-around;
     background-color: rgba(255, 255, 255, 0.752);
-    padding: 2rem;
     border-radius: 1rem;
+    padding: 3em 3em;
+    gap: 1.5em;
 }
-.login-inputs{
+
+.login-inputs {
     width: 20dvw;
     padding: 2%;
 }
-.login-btn{
+
+.login-btn {
     font-weight: bold;
     background-color: black;
     color: white;
-    border-radius: 1em;
-    width: 10dvw;
-    height: 5dvh;
+    border-radius: 10px;
+    padding: 3% 10%;
     cursor: pointer;
+}
+
+.register-link,
+.login-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    gap: 0.5em;
+}
+
+.register-link button,
+.login-link button {
+    background: black;
+    color: white;
+    padding: 5px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: .8em;
 }

@@ -57,15 +57,23 @@ const Register = () => {
             });
         }
     }
+
+    const handleLoginClick = () => {
+        navigate("/");
+    }
     return (
         <div className='login-page'>
             <div className='login-controller'>
-                <div>
+                <form onSubmit={handleFormSubmit} className='login-child'>
                     <h1>Register</h1>
-                    <input className='login-inputs' name='username' type='text' placeholder='Enter RegdNo' value={formData.username} onChange={handleFormChange} />
-                    <input className='login-inputs' value={formData.password} name='password' type='password' onChange={handleFormChange} placeholder='Enter password' />
-                    <button onClick={handleFormSubmit} type='submit' className='login-btn'>Register</button>
-                </div>
+                    <input className='login-inputs' name='username' type='text' placeholder='Enter RegdNo' value={formData.username} onChange={handleFormChange} required />
+                    <input className='login-inputs' value={formData.password} name='password' type='password' onChange={handleFormChange} placeholder='Enter password' required />
+                    <button type='submit' className='login-btn'>Register</button>
+                    <div className='login-link'>
+                        <p>Already have an account?</p>
+                        <button onClick={handleLoginClick} >Login</button>
+                    </div>
+                </form>
             </div>
         </div>
     )
